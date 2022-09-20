@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  background-image: url("/assets/images/pattern-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box {
+    width: 500px;
+    margin: 1em auto;
+    height: Auto;
+    text-align: center;
+    mat-card-header{
+        display: block;
+        mat-card-title{
+            text-align: center;       
+    }
+}
+    mat-form-field {
+      min-width: 150px;
+      max-width: 500px;
+      width: 100%;
+      border: 1px;
+      margin: 10px 0;
+    }
+  }
+
+}

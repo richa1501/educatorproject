@@ -12,7 +12,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class LoginComponent implements OnInit { 
     emailFormControl = new FormControl('', [Validators.required, Validators.email]);
     passwordFormControl = new FormControl('', [Validators.required,Validators.minLength(8)]);
-  constructor(private authService: AuthService,private router: Router,private activatedroute: ActivatedRoute) { }
+    role :string ='';
+    roles : string [];
+  constructor(private authService: AuthService,private router: Router,private activatedroute: ActivatedRoute) { 
+    this.roles =[
+      'User','Admin'
+    ]
+  }    
   ngOnInit(): void {
    
   }

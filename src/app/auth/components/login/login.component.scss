@@ -4,35 +4,27 @@
   box-sizing: border-box;
 }
 
-.image {
-  background-image: url("/assets/images/pattern-background.jpg");
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.container {
+section {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: url('/assets/images/pattern-background.jpg');
+  background-repeat: no-repeat;
+  // display: block;
+  background-size: cover;
+  // background-position: center;
 }
 
 mat-card {
   width: 500px;
   margin: 1em auto;
-  height: Auto;
-  background-color: rgb(231, 237, 244);
+  height: Auto;  
   text-align: center;
-}
-.example-full-width {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  border: 1px;
-  margin: 20px 0;
+  mat-card-header{
+    display: block;
+    margin-top: 10px;
+  }
 }
 
-.full-width {
-  width: 100%;
-}
+

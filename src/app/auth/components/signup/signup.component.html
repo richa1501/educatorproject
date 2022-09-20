@@ -1,1 +1,49 @@
-<p>signup works!</p>
+<section>
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Sign Up</mat-card-title>
+        </mat-card-header>
+        <form class="signupForm" FormGroup="signupform">
+            <mat-card-content>
+                <mat-form-field appearance="outline" class="full-width">
+                    <input type="text" matInput [formControl]="UsernameFormControl" placeholder=" Username" />
+                    <mat-error *ngIf="UsernameFormControl.hasError('required')">
+                        FullName is <strong>required</strong>
+                     </mat-error>
+                </mat-form-field><br />
+                <mat-form-field appearance="outline" class="full-width">
+                    <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" />
+                    <mat-error *ngIf="emailFormControl.hasError('email') &&
+              !emailFormControl.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field><br />
+                <mat-form-field appearance="outline" class="full-width">
+                    <input matInput [formControl]="passwordFormControl"  placeholder="Enter Password" />
+                    <mat-error *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+                        Please enter a valid Password
+                    </mat-error>
+                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field><br />
+                <mat-form-field appearance="outline" class="full-width">
+                    <input matInput [formControl]="confirmPasswordFormControl" placeholder=" ConfirmPassword" />
+                    <mat-error *ngIf="confirmPasswordFormControl.hasError('minlength') && !confirmPasswordFormControl.hasError('required')">
+                        Please enter a valid Password
+                    </mat-error>
+                    <mat-error *ngIf="
+              confirmPasswordFormControl.hasError('Password===confirmPassword')">
+                        Password and ConfirmPassword must be Same
+                    </mat-error>
+                </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="accent" type="Submit">Submit</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</section>

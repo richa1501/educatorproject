@@ -1,5 +1,4 @@
-<div class="image">
-   <div class="container">
+   <section>
       <mat-card>
          <mat-card-header >
             <mat-card-title >Login</mat-card-title>
@@ -32,6 +31,14 @@
                   </mat-form-field>
                </p>
                <p>
+               <mat-form-field appearance="outline" style="width:100%">
+                  <mat-label>Login As </mat-label>
+                  <mat-select >
+                    <mat-option *ngFor="let r of roles" [value]="r">{{r}}</mat-option>             
+                  </mat-select>
+                </mat-form-field>
+               </p>
+               <p>
                   <mat-card-actions>
                      <button mat-raised-button color="accent" type="Submit">Login</button>
                   </mat-card-actions>                  
@@ -40,6 +47,6 @@
             <h4>New User SignUp Here!&nbsp;<a routerLink="/auth/signup">SignUp</a></h4>
          </mat-card-content>
       </mat-card>
-   </div>
-</div>
+   </section>
+
 
